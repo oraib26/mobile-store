@@ -3,6 +3,7 @@ import connectDB from "../DB/connection.js";
 
 import authRouter from "../src/modules/auth/auth.router.js"
 import userRouter from "./modules/user/user.router.js"
+import categoryRouter from "./modules/category/category.router.js"
 
 const initApp = (app, express) => {
   connectDB();
@@ -14,6 +15,7 @@ const initApp = (app, express) => {
 
   app.use("/auth", authRouter);
   app.use("/user",userRouter);
+  app.use("/category",categoryRouter);
 
  
 
