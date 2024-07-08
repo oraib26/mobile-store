@@ -3,14 +3,14 @@ import * as categoryController from "./category.controller.js";
 import fileUpload, { fileValidation } from "../../utls/multer.js";
 import { asyncHandler } from "../../utls/errorHandling.js";
 import { auth } from "../../middleware/auth.js";
-// import subcategoryRouter from "./../subcategory/subcategory.router.js";
+import subcategoryRouter from "./../subcategory/subcategory.router.js";
 import { endPoint } from "./category.endPoint.js";
 import * as validators from "./category.validation.js";
 import { validation } from "../../middleware/validation.js";
 
 const router = Router();
 
-// router.use("/:categoryId/subcategory", subcategoryRouter);
+ router.use("/:categoryId/subcategory", subcategoryRouter);
 
 router.post(
   "/",
