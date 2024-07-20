@@ -8,6 +8,7 @@ import subcategoryRouter from "./modules/subcategory/subcategory.router.js"
 import productRouter from "./modules/product/product.router.js"
 import couponRouter from "./modules/coupon/coupon.router.js"
 import cartRouter from "./modules/cart/cart.router.js"
+import orderRouter from "./modules/order/order.router.js"
 
 const initApp = (app, express) => {
   connectDB();
@@ -24,6 +25,7 @@ const initApp = (app, express) => {
   app.use("/product", productRouter);
   app.use("/coupon", couponRouter);
   app.use("/cart", cartRouter);
+  app.use("/order", cartRouter);
 
  
 
