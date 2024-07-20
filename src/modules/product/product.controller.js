@@ -42,7 +42,7 @@ export const createProduct = async (req, res, next) => {
   }
   return res.status(201).json({ message: "success", product });
 };
-export const getproducts = async (req, res) => {
+export const getproduct = async (req, res) => {
   const { skip, limit } = pagination(req.query.page, req.query.limit);
   let queryObj = { ...req.query };
   const execQuery = ["page", "limit", "sort", "search", "fields"];
